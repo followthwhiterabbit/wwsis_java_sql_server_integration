@@ -1,0 +1,337 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Appendix&nbsp;A.&nbsp;Lists of Keywords</title>
+<link href="../docbook.css" type="text/css" rel="stylesheet">
+<meta content="DocBook XSL Stylesheets V1.78.1" name="generator">
+<meta name="keywords" content="HSQLDB, HyperSQL, SQL Keywords SQL STAT">
+<meta name="keywords" content="Hsqldb, HyperSQL, Database, JDBC, Java">
+<link rel="home" href="index.html" title="HyperSQL User Guide">
+<link rel="up" href="index.html" title="HyperSQL User Guide">
+<link rel="prev" href="odbc-chapt.html" title="Chapter&nbsp;17.&nbsp;HyperSQL via ODBC">
+<link rel="next" href="dbfiles-app.html" title="Appendix&nbsp;B.&nbsp;HyperSQL Database Files and Recovery">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader">
+<table summary="Navigation header" width="100%">
+<tr>
+<td align="left" width="30%"><a accesskey="p" href="odbc-chapt.html"><img src="../images/db/prev.png" alt="Prev"></a>&nbsp;</td><td align="center" width="40%" style="font-weight:bold;">Appendix&nbsp;A.&nbsp;Lists of Keywords</td><td align="right" width="30%">&nbsp;<a accesskey="n" href="dbfiles-app.html"><img src="../images/db/next.png" alt="Next"></a></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="30%">Chapter&nbsp;17.&nbsp;HyperSQL via ODBC&nbsp;</td><td align="center" width="40%"><a accesskey="h" href="index.html"><img src="../images/db/home.png" alt="Home"></a></td><td valign="top" align="right" width="30%">&nbsp;Appendix&nbsp;B.&nbsp;HyperSQL Database Files and Recovery</td>
+</tr>
+</table>
+</div>
+<HR>
+<div class="appendix">
+<div class="titlepage">
+<div>
+<div>
+<h1 class="title">
+<a name="lists-app"></a>Lists of Keywords</h1>
+</div>
+<div>
+<h3 class="subtitle">
+<i>List of SQL Keywords</i>
+</h3>
+</div>
+<div>
+<div class="author">
+<h3 class="author">
+<span class="firstname">Fred</span> <span class="surname">Toussi</span>
+</h3>
+<div class="affiliation">
+<span class="orgname">The HSQL Development Group<br>
+</span>
+</div>
+</div>
+</div>
+<div>
+<p class="releaseinfo">$Revision: 847 $</p>
+</div>
+<div>
+<p class="pubdate">2024-06-01</p>
+</div>
+</div>
+</div>
+<div class="toc">
+<p>
+<b>Table of Contents</b>
+</p>
+<dl class="toc">
+<dt>
+<span class="section"><a href="lists-app.html#lta_standard_keywords">List of SQL Standard Keywords</a></span>
+</dt>
+<dt>
+<span class="section"><a href="lists-app.html#lta_disallowed_keywords">List of SQL Keywords Disallowed as HyperSQL Identifiers</a></span>
+</dt>
+<dt>
+<span class="section"><a href="lists-app.html#lta_function_keywords">Special Function Keywords</a></span>
+</dt>
+</dl>
+</div>
+<div class="section">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both">
+<a name="lta_standard_keywords"></a>List of SQL Standard Keywords</h2>
+</div>
+</div>
+</div>
+<a name="N17D85" class="indexterm"></a>
+<p>According to the SQL Standard, the SQL Language reserved keywords
+    cannot be used as identifiers (names of database objects such as columns
+    and tables) without quoting.</p>
+<p>HyperSQL has two modes of operation, which are selected with the
+    <code class="literal">SET DATABASE SQL NAMES { TRUE | FALSE }</code> to allow or
+    disallow the keywords as identifiers. The default mode is FALSE and allows
+    the use of most keywords as identifiers. Even in this mode, keywords
+    cannot be used as USER or ROLE identifiers. When the mode is TRUE, none of
+    the keywords listed below can be used as unquoted identifiers.</p>
+<p>All keywords can be used with double quotes as identifiers. For
+    example</p>
+<pre class="programlisting">  CREATE TABLE "ALL" ("AND" INT, "WHEN" INT)
+  SELECT "AND" FROM "ALL" WHERE "WHEN" = 2022
+</pre>
+<p>
+<code class="literal">ABS &bull; ABSENT &bull; ACOS &bull; ALL &bull; ALLOCATE &bull; ALTER &bull; AND &bull; ANY
+    &bull; ANY_VALUE &bull; ARE &bull; ARRAY &bull; ARRAY_AGG &bull; ARRAY_MAX_CARDINALITY &bull; AS &bull;
+    ASENSITIVE &bull; ASIN &bull; ASYMMETRIC &bull; AT &bull; ATAN &bull; ATOMIC &bull; AUTHORIZATION &bull;
+    AVG</code>
+</p>
+<p>
+<code class="literal">BEGIN &bull; BEGIN_FRAME &bull; BEGIN_PARTITION &bull; BETWEEN &bull; BIGINT
+    &bull; BINARY &bull; BIT_LENGTH &bull; BLOB &bull; BOOLEAN &bull; BOTH &bull; BY</code>
+</p>
+<p>
+<code class="literal">CALL &bull; CALLED &bull; CARDINALITY &bull; CASCADED &bull; CASE &bull; CAST &bull;
+    CEIL &bull; CEILING &bull; CHAR &bull; CHARACTER &bull; CHARACTER_LENGTH &bull; CHAR_LENGTH &bull; CHECK
+    &bull; CLOB &bull; CLOSE &bull; COALESCE &bull; COLLATE &bull; COLLECT &bull; COLUMN &bull; COMMIT &bull;
+    COMPARABLE &bull; CONDIITON &bull; CONNECT &bull; CONSTRAINT &bull; CONTAINS &bull; CONVERT &bull; CORR
+    &bull; CORRESPONDING &bull; COS &bull; COSH &bull; COUNT &bull; COVAR_POP &bull; COVAR_SAMP &bull; CREATE &bull;
+    CROSS &bull; CUBE &bull; CUME_DIST &bull; CURRENT &bull; CURRENT_CATALOG &bull; CURRENT_DATE &bull;
+    CURRENT_DEFAULT_TRANSFORM_GROUP &bull; CURRENT_PATH &bull; CURRENT_ROLE &bull;
+    CURRENT_ROW &bull; CURRENT_SCHEMA &bull; CURRENT_TIME &bull; CURRENT_TIMESTAMP &bull;
+    CURRENT_TRANSFORM_GROUP_FOR_TYPE &bull; CURRENT_USER &bull; CURSOR &bull;
+    CYCLE</code>
+</p>
+<p>
+<code class="literal">DATE &bull; DAY &bull; DEALLOCATE &bull; DEC &bull; DECIMAL &bull; DECLARE &bull;
+    DEFAULT &bull; DELETE &bull; DENSE_RANK &bull; DEREF &bull; DESCRIBE &bull; DETERMINISTIC &bull;
+    DISCONNECT &bull; DISTINCT &bull; DO &bull; DOUBLE &bull; DROP &bull; DYNAMIC</code>
+</p>
+<p>
+<code class="literal">EACH &bull; ELEMENT &bull; ELSE &bull; ELSEIF &bull; EMPTY &bull; END &bull; END_EXEC
+    &bull; END_FRAME &bull; END_PARTITION &bull; EQUALS &bull; ESCAPE &bull; EVERY &bull; EXCEPT &bull; EXEC &bull;
+    EXECUTE &bull; EXISTS &bull; EXIT &bull; EXP &bull; EXTERNAL &bull; EXTRACT</code>
+</p>
+<p>
+<code class="literal">FALSE &bull; FETCH &bull; FILTER &bull; FIRST_VALUE &bull; FLOAT &bull; FLOOR &bull;
+    FOR &bull; FOREIGN &bull; FRAME_ROW &bull; FREE &bull; FROM &bull; FULL &bull; FUNCTION &bull;
+    FUSION</code>
+</p>
+<p>
+<code class="literal">GET &bull; GLOBAL &bull; GRANT &bull; GROUP &bull; GROUPING &bull;
+    GROUPS</code>
+</p>
+<p>
+<code class="literal">HANDLER &bull; HAVING &bull; HOLD &bull; HOUR</code>
+</p>
+<p>
+<code class="literal">IDENTITY &bull; IF &bull; IMPORT &bull; IN &bull; INDICATOR &bull; INITIAL &bull;
+    INNER &bull; INOUT &bull; INSENSITIVE &bull; INSERT &bull; INT &bull; INTEGER &bull; INTERSECT &bull;
+    INTERSECTION &bull; INTERVAL &bull; INTO &bull; IS &bull; ITERATE</code>
+</p>
+<p>
+<code class="literal">JOIN &bull; JSON &bull; JSON_ARRAY &bull; JSON_ARRAYAGG &bull; JSON_EXISTS &bull;
+    JSON_OBJECT &bull; JSON_OBJECTAGG &bull; JSON_QUERY &bull; JSON_TABLE &bull;
+    JSON_VALUE</code>
+</p>
+<p>
+<code class="literal">LAG &bull; LANGUAGE &bull; LARGE &bull; LAST_VALUE &bull; LATERAL &bull; LEAD &bull;
+    LEADING &bull; LEAST &bull; LEAVE &bull; LEFT &bull; LIKE &bull; LIKE_REGX &bull; LISTAGG &bull; LN &bull; LOCAL &bull;
+    LOCALTIME &bull; LOCALTIMESTAMP &bull; LOG &bull; LOG10 &bull; LOOP &bull; LOWER &bull; LPAD &bull;
+    LTRIM</code>
+</p>
+<p>
+<code class="literal">MATCH &bull; MAX &bull; MAX_CARDINALITY &bull; MEMBER &bull; MERGE &bull; METHOD
+    &bull; MIN &bull; MINUTE &bull; MOD &bull; MODIFIES &bull; MODULE &bull; MONTH &bull;
+    MULTISET</code>
+</p>
+<p>
+<code class="literal">NATIONAL &bull; NATURAL &bull; NCHAR &bull; NCLOB &bull; NEW &bull; NO &bull; NONE &bull;
+    NORMALIZE &bull; NOT &bull; NTH_VALUE &bull; NTILE &bull; NULL &bull; NULLIF &bull;
+    NUMERIC</code>
+</p>
+<p>
+<code class="literal">OCCURRENCES_REGEX &bull; OCTET_LENGTH &bull; OF &bull; OFFSET &bull; OLD &bull;
+    OMIT &bull; ON &bull; ONLY &bull; OPEN &bull; OR &bull; ORDER &bull; OUT &bull; OUTER &bull; OVER &bull; OVERLAPS &bull;
+    OVERLAY</code>
+</p>
+<p>
+<code class="literal">PARAMETER &bull; PARTITION &bull; PERCENTILE_CONT &bull;
+    PERCENTILE_DISC &bull; PERCENT_RANK &bull; PERIOD &bull; POSITION &bull; POSITION_REGEX &bull;
+    POWER &bull; PRECEDES &bull; PRECISION &bull; PREPARE &bull; PRIMARY &bull;
+    PROCEDURE</code>
+</p>
+<p>
+<code class="literal">RANGE &bull; RANK &bull; READS &bull; REAL &bull; RECURSIVE &bull; REF &bull;
+    REFERENCES &bull; REFERENCING &bull; REGR_AVGX &bull; REGR_AVGY &bull; REGR_COUNT &bull;
+    REGR_INTERCEPT &bull; REGR_R2 &bull; REGR_SLOPE &bull; REGR_SXX &bull; REGR_SXY &bull; REGR_SYY &bull;
+    RELEASE &bull; REPEAT &bull; RESIGNAL &bull; RESULT &bull; RETURN &bull; RETURNS &bull; REVOKE &bull; RIGHT &bull;
+    ROLLBACK &bull; ROLLUP &bull; ROW &bull; ROWS &bull; ROW_NUMBER &bull; RPAD &bull;
+    RTRIM</code>
+</p>
+<p>
+<code class="literal">SAVEPOINT &bull; SCOPE &bull; SCROLL &bull; SEARCH &bull; SECOND &bull; SELECT &bull;
+    SENSITIVE &bull; SESSION_USER &bull; SET &bull; SIGNAL &bull; SIMILAR &bull; SIN &bull; SINH &bull; SMALLINT
+    &bull; SOME &bull; SPECIFIC &bull; SPECIFICTYPE &bull; SQL &bull; SQLEXCEPTION &bull; SQLSTATE &bull;
+    SQLWARNING &bull; SQRT &bull; STACKED &bull; START &bull; STATIC &bull; STDDEV_POP &bull; STDDEV_SAMP &bull;
+    SUBMULTISET &bull; SUBSTRING &bull; SUBSTRING_REGEX &bull; SUCCEEDS &bull; SUM &bull; SYMMETRIC &bull;
+    SYSTEM &bull; SYSTEM_TIME &bull; SYSTEM_USER</code>
+</p>
+<p>
+<code class="literal">TABLE &bull; TABLESAMPLE &bull; TAN &bull; TANH &bull; THEN &bull; TIME &bull;
+    TIMESTAMP &bull; TIMEZONE_HOUR &bull; TIMEZONE_MINUTE &bull; TO &bull; TRAILING &bull; TRANSLATE &bull;
+    TRANSLATE_REGEX &bull; TRANSLATION &bull; TREAT &bull; TRIGGER &bull; TRIM &bull; TRIM_ARRAY &bull; TRUE
+    &bull; TRUNCATE</code>
+</p>
+<p>
+<code class="literal">UESCAPE &bull; UNDO &bull; UNION &bull; UNIQUE &bull; UNKNOWN &bull; UNNEST &bull;
+    UNTIL &bull; UPDATE &bull; UPPER &bull; USER &bull; USING</code>
+</p>
+<p>
+<code class="literal">VALUE &bull; VALUES &bull; VALUE_OF &bull; VARBINARY &bull; VARCHAR &bull;
+    VARYING &bull; VAR_POP &bull; VAR_SAMP &bull; VERSIONING</code>
+</p>
+<p>
+<code class="literal">WHEN &bull; WHENEVER &bull; WHERE &bull; WHILE &bull; WIDTH_BUCKET &bull; WINDOW
+    &bull; WITH &bull; WITHIN &bull; WITHOUT</code>
+</p>
+<p>
+<code class="literal">YEAR</code>
+</p>
+</div>
+<div class="section">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both">
+<a name="lta_disallowed_keywords"></a>List of SQL Keywords Disallowed as HyperSQL Identifiers</h2>
+</div>
+</div>
+</div>
+<p>When the default <code class="literal">SET DATABASE SQL NAMES FALSE</code>
+    mode is used, only a subset of SQL Standard keywords cannot be used as
+    HyperSQL identifiers. The keywords are as follows:</p>
+<p>
+<code class="literal">ALL &bull; AND &bull; ANY &bull; ARRAY &bull; AS &bull; AT</code>
+</p>
+<p>
+<code class="literal">BETWEEN &bull; BOTH &bull; BY</code>
+</p>
+<p>
+<code class="literal">CALL &bull; CASE &bull; CAST &bull; COALESCE &bull; CONVERT &bull; CORRESPONDING
+    &bull; COUNT &bull; CREATE &bull; CROSS &bull; CUBE</code>
+</p>
+<p>
+<code class="literal">DEFAULT &bull; DISTINCT &bull; DO &bull; DROP</code>
+</p>
+<p>
+<code class="literal">ELSE &bull; EVERY &bull; EXCEPT &bull; EXISTS</code>
+</p>
+<p>
+<code class="literal">FETCH &bull; FOR &bull; FROM &bull; FULL</code>
+</p>
+<p>
+<code class="literal">GRANT &bull; GROUP &bull; GROUPING</code>
+</p>
+<p>
+<code class="literal">HAVING</code>
+</p>
+<p>
+<code class="literal">IN &bull; INNER &bull; INTERSECT &bull; INTO &bull; IS</code>
+</p>
+<p>
+<code class="literal">JOIN</code>
+</p>
+<p>
+<code class="literal">LEADING &bull; LEFT &bull; LIKE</code>
+</p>
+<p>
+<code class="literal">MAX &bull; MIN</code>
+</p>
+<p>
+<code class="literal">NATURAL &bull; NOT &bull; NULLIF</code>
+</p>
+<p>
+<code class="literal">ON &bull; OR &bull; ORDER &bull; OUTER</code>
+</p>
+<p>
+<code class="literal">PRIMARY</code>
+</p>
+<p>
+<code class="literal">REFERENCES &bull; RIGHT &bull; ROLLUP</code>
+</p>
+<p>
+<code class="literal">SELECT &bull; SET &bull; SOME &bull; STDDEV_POP &bull; STDDEV_SAMP &bull;
+    SUM</code>
+</p>
+<p>
+<code class="literal">TABLE &bull; THEN &bull; TO &bull; TRAILING &bull;
+    TRIGGER</code>
+</p>
+<p>
+<code class="literal">UNION &bull; UNIQUE &bull; USING</code>
+</p>
+<p>
+<code class="literal">VALUES &bull; VAR_POP &bull; VAR_SAMP</code>
+</p>
+<p>
+<code class="literal">WHEN &bull; WHERE &bull; WITH</code>
+</p>
+</div>
+<div class="section">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both">
+<a name="lta_function_keywords"></a>Special Function Keywords</h2>
+</div>
+</div>
+</div>
+<p>HyperSQL supports SQL Standard functions that are called without
+    parentheses. These functions include <code class="literal">CURRENT_DATE</code>,
+    <code class="literal">LOCALTIMESTAMP</code>, <code class="literal">TIMEZONE_HOUR</code>,
+    <code class="literal">USER</code>, etc. When the default <code class="literal">SET DATABASE SQL
+    NAMES FALSE</code> mode is used, keywords that are names of SQL
+    functions can be used as column names without double quotes in CREATE
+    TABLE statements . But when the identifier is a column name and is
+    referenced in SELECT or other statements, the keywords must be double
+    quoted. Otherwise the result of the SQL function is returned instead of
+    the column value.</p>
+<p>HyperSQL also supports non-standard functions
+    <code class="literal">SYSTIMESTAMP</code>, <code class="literal">CURDATE</code>,
+    <code class="literal">CURTIME</code>, <code class="literal">TODAY</code>,
+    <code class="literal">SYSDATE</code> and <code class="literal">NOW</code> which can be called
+    with or without parentheses ( e.g. <code class="literal">NOW()</code> or
+    <code class="literal">NOW</code> ). These names can be used as column names, but the
+    names must be double quoted in SELECT and other statements.</p>
+</div>
+</div>
+<HR xmlns:xi="http://www.w3.org/2001/XInclude">
+<P xmlns:xi="http://www.w3.org/2001/XInclude" class="svnrev">$Revision: 6752 $</P>
+<div class="navfooter">
+<hr>
+<table summary="Navigation footer" width="100%">
+<tr>
+<td align="left" width="40%"><a accesskey="p" href="odbc-chapt.html"><img src="../images/db/prev.png" alt="Prev"></a>&nbsp;</td><td align="center" width="20%">&nbsp;</td><td align="right" width="40%">&nbsp;<a accesskey="n" href="dbfiles-app.html"><img src="../images/db/next.png" alt="Next"></a></td>
+</tr>
+<tr>
+<td valign="top" align="left" width="40%">Chapter&nbsp;17.&nbsp;HyperSQL via ODBC&nbsp;</td><td align="center" width="20%"><a accesskey="h" href="index.html"><img src="../images/db/home.png" alt="Home"></a></td><td valign="top" align="right" width="40%">&nbsp;Appendix&nbsp;B.&nbsp;HyperSQL Database Files and Recovery</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

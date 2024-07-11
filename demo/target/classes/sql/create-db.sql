@@ -24,6 +24,11 @@ CREATE TABLE library_item (
 
 
 
+
+
+
+
+
 -- Payment table
 CREATE TABLE payment (
     payment_code CHAR(10) PRIMARY KEY,

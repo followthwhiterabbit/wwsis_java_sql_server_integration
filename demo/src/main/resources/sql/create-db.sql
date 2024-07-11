@@ -1,4 +1,4 @@
-
+/*
 CREATE DATABASE IF NOT EXISTS Student_Service_System;
 USE Student_Service_System;
 
@@ -115,3 +115,105 @@ CREATE TABLE borrowing (
 
 
 
+*/
+
+-- Drop tables if they exist
+DROP TABLE IF EXISTS borrowing;
+DROP TABLE IF EXISTS payment;
+DROP TABLE IF EXISTS student;
+DROP TABLE IF EXISTS specialization;
+DROP TABLE IF EXISTS time_slot;
+DROP TABLE IF EXISTS subject_page;
+DROP TABLE IF EXISTS subject;
+DROP TABLE IF EXISTS "user";
+DROP TABLE IF EXISTS library_item;
+DROP TABLE IF EXISTS library;
+
+-- Library Item table
+CREATE TABLE library_item (
+    item_code CHAR(10) PRIMARY KEY,
+    title VARCHAR(30),
+    author VARCHAR(30),
+    publisher VARCHAR(20),
+    type VARCHAR(10)
+);
+
+-- Student table
+CREATE TABLE student (
+    student_number CHAR(10) PRIMARY KEY,
+    name VARCHAR(100),
+    dob DATE,
+    gender CHAR(1),
+    nationality VARCHAR(20),
+    email VARCHAR(30)
+);
+
+-- Payment table
+CREATE TABLE payment (
+    payment_code CHAR(10) PRIMARY KEY,
+    payment_date DATE,
+    amount NUMERIC(8, 2),
+    method VARCHAR(50),
+    card_number VARCHAR(16),
+    payment_for VARCHAR(50)
+);
+
+-- Specialization table
+CREATE TABLE specialization (
+    spec_code CHAR(50) PRIMARY KEY,
+    spec_name VARCHAR(50),
+    spec_description VARCHAR(50)
+);
+
+-- Time Slot table
+CREATE TABLE time_slot (
+    slot_code CHAR(5) PRIMARY KEY,
+    day VARCHAR(10),
+    start_time VARCHAR(5),
+    end_time VARCHAR(5)
+);
+
+-- Subject Page table
+CREATE TABLE subject_page (
+    subject_code CHAR(10) PRIMARY KEY,
+    code_subject CHAR(10),
+    name VARCHAR(100),
+    year_of_study CHAR(2)
+);
+
+-- Subject table
+CREATE TABLE subject (
+    subject_code CHAR(10) PRIMARY KEY,
+    subject_name VARCHAR(100),
+    semester CHAR(2)
+);
+
+-- User table
+CREATE TABLE "user" (
+    user_id CHAR(10) PRIMARY KEY,
+    username VARCHAR(20),
+    password VARCHAR(20),
+    email VARCHAR(30)
+);
+
+-- Library table
+CREATE TABLE library (
+    library_code VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(100),
+    location VARCHAR(100),
+    hours VARCHAR(50),
+    contact_number VARCHAR(20),
+    website VARCHAR(50)
+);
+
+-- Borrowing table
+CREATE TABLE borrowing (
+    item_code CHAR(10),
+    student_number CHAR(10),
+    issue_date DATE,
+    return_date DATE,
+    fine NUMERIC(5, 2),
+    PRIMARY KEY (item_code, student_number),
+    FOREIGN KEY (item_code) REFERENCES library_item(item_code),
+    FOREIGN KEY (student_number) REFERENCES student(student_number)
+);

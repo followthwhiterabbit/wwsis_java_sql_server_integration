@@ -1,3 +1,3 @@
 ## collobrators
 # Kaan Karaalioglu
-# Fernando David Tchalengua Nangolo
+# Fernando David Tch. Nangolo

@@ -66,8 +66,8 @@ INSERT INTO library_item (item_code, title, author, publisher, type) VALUES
 
 -- Inserting into student table
 INSERT INTO student (student_number, name, dob, gender, nationality, email) VALUES 
-('S001', 'John Doe', '2000-01-01', 'M', 'American', 'john.doe@example.com'),
-('S002', 'Jane Smith', '2001-02-02', 'F', 'British', 'jane.smith@example.com');
+('S001', 'Fernando Nangolo', '1998-09-13', 'M', 'American', 'fernando.n@example.com'),
+('S002', 'Will Paulo', '2001-02-02', 'F', 'British', 'jane.smith@example.com');
 
 -- Inserting into payment table
 INSERT INTO payment (payment_code, payment_date, amount, method, card_number, payment_for) VALUES 

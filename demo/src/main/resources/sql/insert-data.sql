@@ -106,5 +106,5 @@ INSERT INTO library (library_code, name, location, hours, contact_number, websit
 
 -- Inserting into borrowing table
 INSERT INTO borrowing (item_code, student_number, issue_date, return_date, fine) VALUES 
-('001', 'S001', '2024-06-01', '2024-06-08', 0.00),
-('002', 'S002', '2024-06-02', '2024-06-09', 0.00);
+('001', 'S001', '2024-07-22', '2024-07-30', 0.00),
+('002', 'S002', '2024-08-02', '2024-08-09', 0.00);

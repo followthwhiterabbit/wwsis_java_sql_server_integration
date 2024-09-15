@@ -1,4 +1,3 @@
 ## collobrators
 # Kaan Karaalioglu
-# Fernando Nangolo F
-git add
+# Fernando David Tchalengua Nangolo

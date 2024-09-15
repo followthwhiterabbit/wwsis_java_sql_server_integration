@@ -1,3 +1,10 @@
-com/pl/wwsis/sss/model/Student.class
-com/example/Main.class
-com/pl/wwsis/sss/model/LibraryItem.class
+com\pl\wwsis\sss\model\Subject.class
+com\pl\wwsis\sss\model\Borrowing.class
+com\pl\wwsis\sss\model\Payment.class
+com\pl\wwsis\sss\model\SubjectPage.class
+com\example\Main.class
+com\pl\wwsis\sss\model\TimeSlot.class
+com\pl\wwsis\sss\model\LibraryItem.class
+com\pl\wwsis\sss\model\Specialization.class
+com\pl\wwsis\sss\model\Student.class
+com\pl\wwsis\sss\model\Library.class
